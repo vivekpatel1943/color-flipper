@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Flipper</title>
+</head>
+
+<body>
+    <h2>Color Flipper</h2>
+    <button id="green" style="background-color: green;">Green</button>
+    <button id="red" style="background-color: red;">Red</button>
+    <button id="blue" style="background-color: blue;">Blue</button>
+    <button id="random" style="background-color: white;">Random</button>
+    <script>
+        document.getElementById('green').addEventListener('click', () => {
+            document.body.style.background = 'green';
+        });
+        document.getElementById('red').addEventListener('click', () => {
+            document.body.style.background = 'red';
+        });
+        document.getElementById('blue').addEventListener('click', () => {
+            document.body.style.background = 'blue';
+        });
+        document.getElementById('random').addEventListener('click', () => {
+            const randomColor = `rgb(${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)})`; 
+            document.body.style.backgroundColor = randomColor;
+        }); 
+
+    </script>
+</body>
+
+</html>
